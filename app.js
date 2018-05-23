@@ -53,6 +53,7 @@ app.get('*', function(req,res,next){
 	res.sendFile(path.resolve('client/index.html'));
 });
 
+//app.use(express.static('public'));//Hacemos publico el directorio Post. No hay que meter la carpeta public en la ruta.
 
 
 
