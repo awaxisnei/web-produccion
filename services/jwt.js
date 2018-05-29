@@ -16,7 +16,7 @@ exports.createToken= function(user){
 		newsletter:user.newsletter,
 
 		iat:moment().unix(),//timestamp actual
-		exp:moment().add(2,'days').unix()//Tiempo de expiracion 2 dias en unix.
+		exp:moment().add(14,"days").unix()//Tiempo de expiracion 2 dias en unix.
 
 	};
 
