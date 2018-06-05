@@ -22,17 +22,17 @@ api.get('/get-last-post',postController.getLastPost);
 api.get('/get-image-file-post/:imageFile',postController.getImageFile);
 
 //Métodos POST
-api.post('/save-post', mdAuth.ensureAuth, postController.savePost);//Tienes que ser admin para añadir tags
+api.post('/save-post', postController.savePost);//Tienes que ser admin para añadir tags
 api.post('/get-post-by-author',postController.getPostByAuthor);
 api.post('/get-post-by-id',postController.getPostById);
 api.post('/get-posts/:page',postController.getPostsPagination);
-api.post('/upload-image-post/:id',[mdAuth.ensureAuth,mdUpload],postController.uploadImagePost);//En la parte de middleware pasamos un array mdAuth y md_upload
+api.post('/upload-image-post/:id',[mdUpload],postController.uploadImagePost);//En la parte de middleware pasamos un array mdAuth y md_upload
 
 //Métodos PUT
-api.put('/update-post/:id',mdAuth.ensureAuth,postController.updatePost);
+api.put('/update-post/:id',postController.updatePost);
 
 //Métodos DELETE
-api.delete('/delete-post/:id', mdAuth.ensureAuth, postController.deletePost);
+api.delete('/delete-post/:id', postController.deletePost);
 
 
 module.exports=api;

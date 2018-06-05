@@ -25,10 +25,10 @@ api.get('/get-count-event',eventController.getCountEvent);
 api.put('/update-event/:id',mdAuth.ensureAuth,eventController.updateEvent);
 
 //Métodos POST
-api.post('/save-event', mdAuth.ensureAuth, eventController.saveEvent);//Tienes que ser admin para añadir tags
-api.post('/get-event-by-id', mdAuth.ensureAuth,eventController.getEventById);
+api.post('/save-event', eventController.saveEvent);//Tienes que ser admin para añadir tags
+api.post('/get-event-by-id', eventController.getEventById);
 
 //Métodos DELETE
-api.delete('/delete-event/:id', mdAuth.ensureAuth, eventController.deleteEvent);
+api.delete('/delete-event/:id', eventController.deleteEvent);
 
 module.exports=api;
