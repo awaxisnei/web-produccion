@@ -47,15 +47,16 @@ app.use('/api',event_routes);
 app.use('/api',mail_routes);
 
 //DESCOMENTAR AL SUBIR AL SERVER
-app.use('/', express.static('client',{redirect: false})); 
+/*app.use('/', express.static('client',{redirect: false})); 
 app.use(express.static('public'));//Hacemos publico el directorio Post. No hay que meter la carpeta public en la ruta.
 app.get('*', function(req,res,next){
 	res.sendFile(path.resolve('client/index.html'));
-});
+});*/
 
-//app.use(express.static('public'));//Hacemos publico el directorio Post. No hay que meter la carpeta public en la ruta.
+app.use(express.static('public'));//Hacemos publico el directorio Post. No hay que meter la carpeta public en la ruta.
 
-
+//Prerender.io
+app.use(require('prerender-node').set('prerenderToken', 'NQN81C4ilIIcRETzYCeV'));
 
 app.get('/probando', (req,res)=>{
 	res.status(200).send({message:'Este es el metodo de prueba'});
