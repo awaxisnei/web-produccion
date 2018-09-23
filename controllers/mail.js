@@ -28,7 +28,7 @@ function sendMail(req, res)
     nodemailer.createTestAccount((err, account) => {
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
-            host: 'smtp.luismiguelmorales.com',
+            host: 'smtp.buzondecorreo.com',
             port: 465,
             secure: true, // true for 465, false for other ports
             auth: {
