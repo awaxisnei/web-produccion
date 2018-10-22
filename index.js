@@ -2,7 +2,7 @@
 
 var mongoose=require('mongoose');
 var app=require('./app'); //Importamos app.js
-var port=process.env.PORT || 3789; //Si tuvieramos variable de entorno en el sistema or un puerto que queramos.
+var port=process.env.PORT || 80; //Si tuvieramos variable de entorno en el sistema or un puerto que queramos.
 
 
 /*mongoose.connect('mongodb://localhost:27017/luismiguelweb',
