@@ -85,6 +85,10 @@ body
 .navbar-default .navbar-toggle:focus .icon-bar{
 	background:#CF142B;
 }
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover{
+	color:white;
+}
 /**FIN COLLAPSE**/
 
 
